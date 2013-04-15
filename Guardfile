@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 def compile_and_test
-  system 'rm -rf output/*'
+  system 'rm -rf classes/*'
   system 'javac -classpath junit-4.11.jar:hamcrest-core-1.3.jar -d classes prime/*.java'
   if $?.exitstatus != 0
     [false, "failed to compile"]
