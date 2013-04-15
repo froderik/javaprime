@@ -11,4 +11,11 @@ public class TestPrimeFactors {
 		int[] actual = Prime.factorsOf(4);
 		assertArrayEquals(expected,actual);
 	}
+	
+	@Test
+	public void factorsOf9(){
+		int[] expected = new int[]{3,3};
+		int[] actual = Prime.factorsOf(9);
+		assertArrayEquals(expected,actual);
+	}
 }
