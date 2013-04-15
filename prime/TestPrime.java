@@ -1,22 +1,40 @@
 package prime;
 
+import java.util.*;
+
 import org.junit.*;
+import org.junit.runner.*;
+import org.junit.runners.*;
+import org.junit.runners.Parameterized.*;
+
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
 public class TestPrime {
-    @Test
-    public void oneIsPrime(){
-        assertPrime(1);
+    private int number;
+    private boolean isPrime;
+
+    public TestPrime(int number, boolean isPrime){
+        this.number = number;
+        this.isPrime = isPrime;
+    }
+
+    @Parameters
+    public static Collection<Object[]> bunchOfPrimes(){
+        return Arrays.asList(new Object[][]{
+            {1, true},
+            {4, false},
+            {9, false}
+        });
     }
 
     @Test
-    public void fourIsNotPrime(){
-        assertNotPrime(4);
-    }
-
-    @Test
-    public void nineIsNotPrime() {
-        assertNotPrime(9);
+    public void isPrime(){
+        if(this.isPrime){
+            assertPrime(this.number);
+        } else {
+            assertNotPrime(this.number);
+        }
     }
 
     public void assertPrime(int number){
