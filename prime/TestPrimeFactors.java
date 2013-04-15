@@ -7,6 +7,8 @@ public class TestPrimeFactors {
 
 	@Test
 	public void factorsOf4(){
-		assertArrayEquals(new int[]{2,2},Prime.factorsOf(4));
+		int[] expected = new int[]{2,2};
+		int[] actual = Prime.factorsOf(4);
+		assertArrayEquals(expected,actual);
 	}
 }
