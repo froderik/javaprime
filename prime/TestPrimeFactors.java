@@ -27,7 +27,8 @@ public class TestPrimeFactors {
         		{2, new int[]{2}},
         		{4, new int[]{2,2}},
         		{5, new int[]{5}},
-        		{9, new int[]{3,3}}
+        		{9, new int[]{3,3}},
+        		{10, new int[]{2,5}}
         });
     }
     
