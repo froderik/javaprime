@@ -23,8 +23,14 @@ public class TestPrime {
     public static Collection<Object[]> bunchOfPrimes(){
         return Arrays.asList(new Object[][]{
             {1, true},
+            {2, true},
+            {3, true},
             {4, false},
-            {9, false}
+            {7, true},
+            {9, false},
+            {10, false},
+            {13, true},
+            {15, false}
         });
     }
 
