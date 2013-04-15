@@ -10,11 +10,11 @@ import org.junit.runners.Parameterized.*;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class TestPrime {
+public class TestIsPrime {
     private int number;
     private boolean isPrime;
 
-    public TestPrime(int number, boolean isPrime){
+    public TestIsPrime(int number, boolean isPrime){
         this.number = number;
         this.isPrime = isPrime;
     }
