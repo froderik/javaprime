@@ -15,7 +15,8 @@ public class Prime {
 		return Math.sqrt(number);
 	}
 
-	public static int[] factorsOf(int i) {
-		return new int[]{2,2};
+	public static int[] factorsOf(int number) {
+		int sqrt = (int)Math.sqrt(number);
+		return new int[]{sqrt,sqrt};
 	}
 }
