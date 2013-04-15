@@ -6,11 +6,26 @@ import static org.junit.Assert.*;
 public class TestPrime {
     @Test
     public void oneIsPrime(){
-        assertTrue("1 should be a prime", Prime.isPrime(1));
+        assertPrime(1);
     }
 
     @Test
     public void fourIsNotPrime(){
-        assertFalse("4 should not be a prime", Prime.isPrime(4));
+        assertNotPrime(4);
+    }
+
+    @Test
+    public void nineIsNotPrime() {
+        assertNotPrime(9);
+    }
+
+    public void assertPrime(int number){
+        String message = "" + number + " should be a prime";
+        assertTrue(message, Prime.isPrime(number));
+    }
+
+    public void assertNotPrime(int number){
+        String message = "" + number + " should not be a prime";
+        assertFalse(message, Prime.isPrime(number));
     }
 }
